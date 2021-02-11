@@ -1,6 +1,6 @@
 # cgi-sample
 
-CGI sample based on [CGI-LIB Library](cgi-lib.html) of Noel V Aguilar.
+CGI sample based on CGI-LIB Library of Noel V Aguilar.
 
 ## Contributors
 
