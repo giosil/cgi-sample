@@ -8,7 +8,7 @@ using namespace std;
 void sendResult(string title, string text);
 string hello(string name);
 
-int main(int args, char* argv)
+int main(int argc, char* argv[])
 {
 	char *name;
 	LIST* params;
@@ -20,6 +20,7 @@ int main(int args, char* argv)
 	if (!params)
 	{
 		sendResult("Hello", "cgi-sample running. Append ?name=XXX parameter.");
+		list_clear(params);
 		return 0;
 	}
 
@@ -27,7 +28,8 @@ int main(int args, char* argv)
 
 	if (!name)
 	{
-		sendResult("Error", "Invalid name parameter.");
+		sendResult("Error", "Unspecified name parameter.");
+		list_clear(params);
 		return 0;
 	}
 

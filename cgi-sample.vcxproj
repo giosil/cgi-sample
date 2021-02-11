@@ -146,13 +146,11 @@
   <ItemGroup>
     <ClCompile Include="cgi-lib.c" />
     <ClCompile Include="cgi-sample.cpp" />
-    <ClCompile Include="html-lib.c" />
     <ClCompile Include="list-lib.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="cgi-lib.h" />
     <ClInclude Include="cgi-priv.h" />
-    <ClInclude Include="html-lib.h" />
     <ClInclude Include="list-lib.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

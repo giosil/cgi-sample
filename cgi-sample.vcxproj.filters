@@ -18,9 +18,6 @@
     <ClCompile Include="list-lib.c">
       <Filter>File di origine</Filter>
     </ClCompile>
-    <ClCompile Include="html-lib.c">
-      <Filter>File di origine</Filter>
-    </ClCompile>
     <ClCompile Include="cgi-lib.c">
       <Filter>File di origine</Filter>
     </ClCompile>
@@ -33,9 +30,6 @@
       <Filter>File di intestazione</Filter>
     </ClInclude>
     <ClInclude Include="list-lib.h">
-      <Filter>File di intestazione</Filter>
-    </ClInclude>
-    <ClInclude Include="html-lib.h">
       <Filter>File di intestazione</Filter>
     </ClInclude>
     <ClInclude Include="cgi-priv.h">
