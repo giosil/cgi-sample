@@ -6,7 +6,7 @@
 using namespace std;
 
 void sendResult(string title, string text);
-void sendMessage(string title, string text);
+string hello(string name);
 
 int main(int args, char* argv)
 {
@@ -19,7 +19,7 @@ int main(int args, char* argv)
 
 	if (!params)
 	{
-		sendMessage("Hello", "cgi-sample running. Append ?name=XXX parameter.");
+		sendResult("Hello", "cgi-sample running. Append ?name=XXX parameter.");
 		return 0;
 	}
 
@@ -27,11 +27,11 @@ int main(int args, char* argv)
 
 	if (!name)
 	{
-		sendMessage("Error", "Invalid name parameter.");
+		sendResult("Error", "Invalid name parameter.");
 		return 0;
 	}
 
-	sendResult("Hello", name);
+	sendResult("Hello", hello(name));
 
 	list_clear(params);
 
@@ -46,20 +46,12 @@ void sendResult(string title, string text)
 	cout << "</head>" << endl;
 	cout << "<body>" << endl;
 	cout << "<h2>" + title + "</h2>" << endl;
-	cout << "<p>Hello " + text + ".</p>" << endl;
+	cout << "<p>" + text + "</p>" << endl;
 	cout << "</body>" << endl;
 	cout << "</html>" << endl;
 }
 
-void sendMessage(string title, string text)
+string hello(string name)
 {
-	cout << "<html>" << endl;
-	cout << "<head>" << endl;
-	cout << "<title>" + title + "</title>" << endl;
-	cout << "</head>" << endl;
-	cout << "<body style=\"background-color: #ffffdd\">" << endl;
-	cout << "<h2>" + title + "</h2>" << endl;
-	cout << "<p> " + text + "</p>" << endl;
-	cout << "</body>" << endl;
-	cout << "</html>" << endl;
+	return "Hello " + name + ".";
 }
